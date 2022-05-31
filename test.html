@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+.container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.menu {
+width: 350px;
+overflow: hidden;
+position: relative;
+
+}
+.btn{
+    display: block;
+    font-size: 18px;
+    background:dodgerblue;
+    padding: 14px 25px;
+    color: aliceblue;
+ 
+}
+.smenu{
+    background: #333;
+max-height:0;
+overflow:hidden;
+transition: max-width 0.6s;
+
+   
+}
+
+.smenu a{
+    display: block;
+    font-size: 18px;
+    padding: 4px 25px;
+    color: white;
+    position: relative;
+    position: relative;
+    margin: 2px 0px;
+}
+
+.btn::before{
+    transform: rotate(45deg);
+    position: absolute;
+    content: " ";
+    width: 14px;
+    height: 14px;
+    background-color:dodgerblue;
+    top:43px;
+
+}
+.smenu a::before{
+    position: absolute;
+    content: " ";
+    width: 5px;
+    height: 100%;
+    background-color: dodgerblue;
+    left: 0;
+   opacity: 0;
+   transition: 0.3s;
+}
+.smenu a:hover::before{
+    opacity:1;
+}
+.menu:target .smenu{
+    max-height: 10em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<li class="menu" id="pro">
+<a href="#pro" class="btn">Profile</a>
+<div class="smenu">
+    <a href="">childen</a>
+    <a href="">parent</a>
+    <a href="">aunt</a>
+    <a href="">uncle</a>
+</div>
+</li>
+<li class="menu" id="mess">
+    <a href="#mess" class="btn">Messages</a>
+    <div class="smenu">
+        <a href="">Sent</a>
+        <a href="">new</a>
+   
+    </div>
+    </li>
+    <li class="menu" id="set">
+        <a href="#set" class="btn" >Setting</a>
+        <div class="smenu">
+            <a href="">language</a>
+            <a href="">options</a>
+    
+        </div>
+        </li>
+        <li class="menu" id="log">
+            <a href="#log" class="btn">logout</a>
+            </li>
+
+
+
+    </div>
+
+</body>
+</html>
